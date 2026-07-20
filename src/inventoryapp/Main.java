@@ -5,17 +5,26 @@
  */
 package inventoryapp;
 
-/**
- *
- * @author THINKPAD X240
- */
+import inventoryapp.app.view.LoginView;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        SwingUtilities.invokeLater(() -> {
+            try {
+                for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                    if ("Nimbus".equals(info.getName())) {
+                        UIManager.setLookAndFeel(info.getClassName());
+                        break;
+                    }
+                }
+            } catch (Exception e) {
+                // If Nimbus is not available, fall back to default
+            }
+            new LoginView().setVisible(true);
+        });
     }
     
 }
