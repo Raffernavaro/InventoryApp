@@ -19,7 +19,7 @@ public class Database {
 
     private static final String HOST = "localhost";
     private static final String PORT = "3306";
-    private static final String DB_NAME = "";
+    private static final String DB_NAME = "inventori";
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "";
     private static final String DB_URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB_NAME;
