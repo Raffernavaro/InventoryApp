@@ -207,6 +207,7 @@ public class MenuView extends javax.swing.JFrame {
 
     private void btnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaporanActionPerformed
         // TODO add your handling code here:
+        bukaMenu (new LaporanView());
     }//GEN-LAST:event_btnLaporanActionPerformed
 
     private void bukaMenu(JInternalFrame frame) {

@@ -55,6 +55,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jPanel5.setPreferredSize(new java.awt.Dimension(970, 660));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtTanggalKeluar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -75,7 +76,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
                 btnSimpanTransaksiActionPerformed(evt);
             }
         });
-        jPanel5.add(btnSimpanTransaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 640, -1, 50));
+        jPanel5.add(btnSimpanTransaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 600, -1, 50));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -99,7 +100,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         tblBarangKeluar.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarangKeluar);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, 270));
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, 270));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -164,7 +165,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
                 btnTambahKeranjangActionPerformed(evt);
             }
         });
-        jPanel5.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, -1, 50));
+        jPanel5.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, -1, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
