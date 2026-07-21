@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package inventoryapp;
+
+import inventoryapp.app.controller.LoginController;
+import inventoryapp.app.view.LoginView;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
 /**
  *
@@ -15,7 +15,22 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Gagal set Nimbus Look and Feel: " + e.getMessage());
+        }
+        SwingUtilities.invokeLater(() -> {
+            LoginView loginView = new LoginView();
+            new LoginController(loginView); // Pasang controller di sini
+            loginView.setLocationRelativeTo(null);
+            loginView.setVisible(true);
+        });
     }
-    
+
 }
