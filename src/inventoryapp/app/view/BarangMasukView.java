@@ -5,6 +5,7 @@
  */
 package inventoryapp.app.view;
 
+import inventoryapp.app.controller.BarangMasukController;
 import inventoryapp.app.helper.TableHelper;
 import inventoryapp.app.helper.TextFieldHelper;
 import java.time.LocalDate;
@@ -14,6 +15,8 @@ import java.time.LocalDate;
  * @author THINKPAD X240
  */
 public class BarangMasukView extends javax.swing.JInternalFrame {
+
+    private BarangMasukController controller;
 
     /**
      * Creates new form BarangMasukView
@@ -29,7 +32,10 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
         txtTanggalMasuk.setText(LocalDate.now().toString());
         TextFieldHelper.setReadOnly(txtTanggalMasuk);
         TextFieldHelper.setPlaceholder(txtJumlahBarangMasuk, "Jumlah Barang Masuk");
-        
+
+        controller = new BarangMasukController(this);
+        controller.loadBarang();
+        controller.loadSupplier();
     }
 
     /**
@@ -207,6 +213,34 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
     private void btnTambahKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahKeranjangActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahKeranjangActionPerformed
+
+    public javax.swing.JTextField getTxtTanggalMasuk() {
+        return txtTanggalMasuk;
+    }
+
+    public javax.swing.JTextField getTxtJumlahBarangMasuk() {
+        return txtJumlahBarangMasuk;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox2() {
+        return jComboBox2;
+    }
+
+    public javax.swing.JButton getBtnTambahKeranjang() {
+        return btnTambahKeranjang;
+    }
+
+    public javax.swing.JButton getBtnSimpanTransaksi() {
+        return btnSimpanTransaksi;
+    }
+
+    public javax.swing.JTable getTblBarangMasuk() {
+        return tblBarangMasuk;
+    }
 
     /**
      * @param args the command line arguments

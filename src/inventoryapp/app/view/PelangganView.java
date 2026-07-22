@@ -5,6 +5,7 @@
  */
 package inventoryapp.app.view;
 
+import inventoryapp.app.controller.PelangganController;
 import inventoryapp.app.helper.TableHelper;
 import inventoryapp.app.helper.TextFieldHelper;
 
@@ -13,6 +14,8 @@ import inventoryapp.app.helper.TextFieldHelper;
  * @author THINKPAD X240
  */
 public class PelangganView extends javax.swing.JInternalFrame {
+
+    private PelangganController controller;
 
     /**
      * Creates new form PelangganView
@@ -31,6 +34,9 @@ public class PelangganView extends javax.swing.JInternalFrame {
         TextFieldHelper.setPlaceholder(txtNamaPelanggan, "Nama Pelanggan");
         TextFieldHelper.setPlaceholder(txtAlamat, "Alamat");
         TextFieldHelper.setPlaceholder(txtNoTelp, "No. Telp");
+
+        controller = new PelangganController(this);
+        controller.loadData();
     }
 
     /**
@@ -230,9 +236,45 @@ public class PelangganView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaPelangganActionPerformed
 
-    private void txtAlamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlamatActionPerformed
+    private void txtAlamatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAlamatActionPerformed
+    }
+
+    public javax.swing.JTextField getTxtIdPelanggan() {
+        return txtIdPelanggan;
+    }
+
+    public javax.swing.JTextField getTxtKodePelanggan() {
+        return txtKodePelanggan;
+    }
+
+    public javax.swing.JTextField getTxtNamaPelanggan() {
+        return txtNamaPelanggan;
+    }
+
+    public javax.swing.JTextField getTxtAlamat() {
+        return txtAlamat;
+    }
+
+    public javax.swing.JTextField getTxtNoTelp() {
+        return txtNoTelp;
+    }
+
+    public javax.swing.JButton getBtnSimpan() {
+        return btnSimpan;
+    }
+
+    public javax.swing.JButton getBtnHapus() {
+        return btnHapus;
+    }
+
+    public javax.swing.JButton getBtnRefresh() {
+        return btnRefresh;
+    }
+
+    public javax.swing.JTable getTblPelanggan() {
+        return tblPelanggan;
+    }
 
     /**
      * @param args the command line arguments

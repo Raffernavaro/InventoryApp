@@ -5,11 +5,15 @@
  */
 package inventoryapp.app.view;
 
+import inventoryapp.app.controller.LaporanController;
+
 /**
  *
  * @author THINKPAD X240
  */
 public class LaporanView extends javax.swing.JInternalFrame {
+
+    private LaporanController controller;
 
     /**
      * Creates new form LaporanView
@@ -21,6 +25,8 @@ public class LaporanView extends javax.swing.JInternalFrame {
         setResizable(true);
         setMaximizable(true);
         setIconifiable(true);
+
+        controller = new LaporanController(this);
     }
 
     /**
@@ -70,7 +76,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Laporan" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Laporan", "Laporan Persediaan", "Laporan Barang Masuk", "Laporan Barang Keluar" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -112,8 +118,18 @@ public class LaporanView extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void btnTambahKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahKeranjangActionPerformed
-        // TODO add your handling code here:
+        if (controller != null) {
+            controller.exportPdf();
+        }
     }//GEN-LAST:event_btnTambahKeranjangActionPerformed
+
+    public javax.swing.JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public javax.swing.JButton getBtnTambahKeranjang() {
+        return btnTambahKeranjang;
+    }
 
     /**
      * @param args the command line arguments

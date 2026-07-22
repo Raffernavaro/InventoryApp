@@ -5,6 +5,7 @@
  */
 package inventoryapp.app.view;
 
+import inventoryapp.app.controller.BarangController;
 import inventoryapp.app.helper.TableHelper;
 import inventoryapp.app.helper.TextFieldHelper;
 import java.awt.Color;
@@ -15,6 +16,8 @@ import javax.swing.JTextField;
  * @author THINKPAD X240
  */
 public class BarangView extends javax.swing.JInternalFrame {
+
+    private BarangController controller;
 
     /**
      * Creates new form BarangView
@@ -32,6 +35,10 @@ public class BarangView extends javax.swing.JInternalFrame {
         TextFieldHelper.setPlaceholder(txtNamaBarang, "Nama Barang");
         TextFieldHelper.setPlaceholder(txtSatuan, "Satuan");
         TextFieldHelper.setPlaceholder(txtStok, "Stok");
+
+        controller = new BarangController(this);
+        controller.loadKategori();
+        controller.loadData();
     }
 
     /**
@@ -293,6 +300,46 @@ public class BarangView extends javax.swing.JInternalFrame {
     private void cmbKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbKategoriActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbKategoriActionPerformed
+
+    public javax.swing.JTextField getTxtIdBarang() {
+        return txtIdBarang;
+    }
+
+    public javax.swing.JTextField getTxtKodeBarang() {
+        return txtKodeBarang;
+    }
+
+    public javax.swing.JTextField getTxtNamaBarang() {
+        return txtNamaBarang;
+    }
+
+    public javax.swing.JTextField getTxtSatuan() {
+        return txtSatuan;
+    }
+
+    public javax.swing.JTextField getTxtStok() {
+        return txtStok;
+    }
+
+    public javax.swing.JComboBox<String> getCmbKategori() {
+        return cmbKategori;
+    }
+
+    public javax.swing.JButton getBtnSimpan() {
+        return btnSimpan;
+    }
+
+    public javax.swing.JButton getBtnHapus() {
+        return btnHapus;
+    }
+
+    public javax.swing.JButton getBtnRefresh() {
+        return btnRefresh;
+    }
+
+    public javax.swing.JTable getTblBarang() {
+        return tblBarang;
+    }
 
     /**
      * @param args the command line arguments

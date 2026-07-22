@@ -5,6 +5,7 @@
  */
 package inventoryapp.app.view;
 
+import inventoryapp.app.controller.SupplierController;
 import inventoryapp.app.helper.TableHelper;
 import inventoryapp.app.helper.TextFieldHelper;
 
@@ -13,6 +14,8 @@ import inventoryapp.app.helper.TextFieldHelper;
  * @author THINKPAD X240
  */
 public class SupplierView extends javax.swing.JInternalFrame {
+
+    private SupplierController controller;
 
     /**
      * Creates new form SupplierView
@@ -31,6 +34,9 @@ public class SupplierView extends javax.swing.JInternalFrame {
         TextFieldHelper.setPlaceholder(txtNamaSupplier, "Nama Supplier");
         TextFieldHelper.setPlaceholder(txtAlamat, "Alamat");
         TextFieldHelper.setPlaceholder(txtNoTelp, "No. Telp");
+
+        controller = new SupplierController(this);
+        controller.loadData();
     }
 
     /**
@@ -234,6 +240,42 @@ public class SupplierView extends javax.swing.JInternalFrame {
     private void txtIdSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdSupplierActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdSupplierActionPerformed
+
+    public javax.swing.JTextField getTxtIdSupplier() {
+        return txtIdSupplier;
+    }
+
+    public javax.swing.JTextField getTxtKodeSupplier() {
+        return txtKodeSupplier;
+    }
+
+    public javax.swing.JTextField getTxtNamaSupplier() {
+        return txtNamaSupplier;
+    }
+
+    public javax.swing.JTextField getTxtAlamat() {
+        return txtAlamat;
+    }
+
+    public javax.swing.JTextField getTxtNoTelp() {
+        return txtNoTelp;
+    }
+
+    public javax.swing.JButton getBtnSimpan() {
+        return btnSimpan;
+    }
+
+    public javax.swing.JButton getBtnHapus() {
+        return btnHapus;
+    }
+
+    public javax.swing.JButton getBtnRefresh() {
+        return btnRefresh;
+    }
+
+    public javax.swing.JTable getTblSupplier() {
+        return tblSupplier;
+    }
 
     /**
      * @param args the command line arguments
