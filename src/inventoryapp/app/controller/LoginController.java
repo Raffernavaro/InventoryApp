@@ -5,7 +5,7 @@ import inventoryapp.app.helper.AlertHelper;
 import inventoryapp.app.helper.UserSession;
 import inventoryapp.app.model.Pegawai;
 import inventoryapp.app.view.LoginView;
-import inventoryapp.app.view.MenuView;
+import inventoryapp.app.view.MenuBaruView;
 import inventoryapp.config.Database;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -54,7 +54,7 @@ public class LoginController {
             view.dispose();
 
             // 3. Buka MenuView beserta MenuController-nya
-            MenuView menuView = new MenuView();
+            MenuBaruView menuView = new MenuBaruView();
             menuView.setLocationRelativeTo(null);
             menuView.setVisible(true);
 

@@ -80,6 +80,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
 
         btnTambahKeranjang.setBackground(new java.awt.Color(255, 0, 51));
         btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnTambahKeranjang.setForeground(new java.awt.Color(240, 240, 240));
         btnTambahKeranjang.setText("Export PDF");
         btnTambahKeranjang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

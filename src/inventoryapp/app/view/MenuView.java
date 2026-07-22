@@ -20,30 +20,32 @@ public class MenuView extends javax.swing.JFrame {
      */
     public MenuView() {
         initComponents();
+        
+        setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            @Override
+            public void componentResized(java.awt.event.ComponentEvent evt) {
 
-//        addComponentListener(new java.awt.event.ComponentAdapter() {
-//            @Override
-//            public void componentResized(java.awt.event.ComponentEvent evt) {
-//
-//                jPanel1.setBounds(0, 0, 250, getHeight());
-//
-//                jDesktopPane2.setBounds(
-//                        250,
-//                        0,
-//                        getWidth() - 250,
-//                        getHeight()
-//                );
-//
-//                if (currentFrame != null) {
-//                    currentFrame.setBounds(
-//                            0,
-//                            0,
-//                            jDesktopPane2.getWidth(),
-//                            jDesktopPane2.getHeight()
-//                    );
-//                }
-//            }
-//        });
+                jPanel1.setBounds(0, 0, 250, getHeight());
+
+                jDesktopPane2.setBounds(
+                       250,
+                        0,
+                        getWidth() - 250,
+                        getHeight()
+                );
+
+                if (currentFrame != null) {
+                    currentFrame.setBounds(
+                            0,
+                            0,
+                            jDesktopPane2.getWidth(),
+                            jDesktopPane2.getHeight()
+                    );
+                }
+            }
+        });
     }
 
     /**
