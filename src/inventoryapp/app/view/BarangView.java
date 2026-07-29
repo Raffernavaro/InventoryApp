@@ -64,9 +64,12 @@ public class BarangView extends javax.swing.JInternalFrame {
         txtNamaBarang = new javax.swing.JTextField();
         txtSatuan = new javax.swing.JTextField();
         cmbKategori = new javax.swing.JComboBox<>();
+        jPanel4 = new javax.swing.JPanel();
+        jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("MASTER DATA BARANG");
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtIdBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtIdBarang.setForeground(new java.awt.Color(204, 204, 204));
@@ -75,6 +78,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtIdBarangActionPerformed(evt);
             }
         });
+        jPanel5.add(txtIdBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 296, 870, 30));
 
         txtKodeBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtKodeBarang.setForeground(new java.awt.Color(204, 204, 204));
@@ -83,6 +87,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtKodeBarangActionPerformed(evt);
             }
         });
+        jPanel5.add(txtKodeBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 135, 870, 30));
 
         txtStok.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtStok.setForeground(new java.awt.Color(204, 204, 204));
@@ -92,6 +97,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtStokActionPerformed(evt);
             }
         });
+        jPanel5.add(txtStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 255, 870, 30));
 
         btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
         btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -101,6 +107,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 btnSimpanActionPerformed(evt);
             }
         });
+        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 393, 103, 50));
 
         btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
         btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -110,6 +117,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 btnRefreshActionPerformed(evt);
             }
         });
+        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 393, -1, 50));
 
         btnHapus.setBackground(new java.awt.Color(255, 0, 51));
         btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -119,6 +127,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 btnHapusActionPerformed(evt);
             }
         });
+        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 393, 103, 50));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -142,6 +151,8 @@ public class BarangView extends javax.swing.JInternalFrame {
         tblBarang.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarang);
 
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 454, -1, 231));
+
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -160,10 +171,12 @@ public class BarangView extends javax.swing.JInternalFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addContainerGap())
         );
+
+        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
 
         txtNamaBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtNamaBarang.setForeground(new java.awt.Color(204, 204, 204));
@@ -172,6 +185,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtNamaBarangActionPerformed(evt);
             }
         });
+        jPanel5.add(txtNamaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 175, 870, 30));
 
         txtSatuan.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtSatuan.setForeground(new java.awt.Color(204, 204, 204));
@@ -180,6 +194,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtSatuanActionPerformed(evt);
             }
         });
+        jPanel5.add(txtSatuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 215, 870, 30));
 
         cmbKategori.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cmbKategori.setForeground(new java.awt.Color(153, 153, 153));
@@ -189,63 +204,31 @@ public class BarangView extends javax.swing.JInternalFrame {
                 cmbKategoriActionPerformed(evt);
             }
         });
+        jPanel5.add(cmbKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 337, 870, 30));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtIdBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtKodeBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtStok, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNamaBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSatuan, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(330, 330, 330)
-                .addComponent(btnSimpan)
-                .addGap(15, 15, 15)
-                .addComponent(btnHapus)
-                .addGap(15, 15, 15)
-                .addComponent(btnRefresh))
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel4.setBackground(new java.awt.Color(0, 0, 51));
+
+        jTextField3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jTextField3.setText("Cari Barang");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                .addGap(59, 59, 59))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField3)
+                .addContainerGap())
         );
 
-        jPanel5Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnHapus, btnRefresh, btnSimpan});
-
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(txtIdBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(txtKodeBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(txtNamaBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(txtSatuan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(txtStok, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(cmbKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel5Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cmbKategori, txtIdBarang, txtKodeBarang, txtNamaBarang, txtSatuan, txtStok});
-
-        jPanel5Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnHapus, btnRefresh, btnSimpan});
+        jPanel5.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -352,8 +335,10 @@ public class BarangView extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> cmbKategori;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTable tblBarang;
     private javax.swing.JTextField txtIdBarang;
     private javax.swing.JTextField txtKodeBarang;
