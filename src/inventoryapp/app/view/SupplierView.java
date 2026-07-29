@@ -61,6 +61,8 @@ public class SupplierView extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         txtNamaSupplier = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -73,7 +75,7 @@ public class SupplierView extends javax.swing.JInternalFrame {
                 txtIdSupplierActionPerformed(evt);
             }
         });
-        jPanel5.add(txtIdSupplier, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 870, 30));
+        jPanel5.add(txtIdSupplier, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 870, 30));
 
         txtKodeSupplier.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtKodeSupplier.setForeground(new java.awt.Color(204, 204, 204));
@@ -191,6 +193,30 @@ public class SupplierView extends javax.swing.JInternalFrame {
         });
         jPanel5.add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 870, 30));
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
+
+        jTextField1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jTextField1.setText("Cari Supplier");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addGap(59, 59, 59))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1)
+                .addContainerGap())
+        );
+
+        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -287,8 +313,10 @@ public class SupplierView extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSimpan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tblSupplier;
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtIdSupplier;
