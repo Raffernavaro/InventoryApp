@@ -36,6 +36,8 @@ public class KategoriView extends javax.swing.JInternalFrame {
         TextFieldHelper.setReadOnly(txtIdKategori);
         TextFieldHelper.setPlaceholder(txtNamaKategori, "Nama Kategori");
         TextFieldHelper.setPlaceholder(txtNoRak, "No.Rak");
+        TextFieldHelper.setPlaceholder(txtCari, "Cari Kategori...");
+
         controller = new KategoriController(this);
         controller.loadData();
     }
@@ -61,7 +63,7 @@ public class KategoriView extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -145,8 +147,8 @@ public class KategoriView extends javax.swing.JInternalFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jTextField1.setText("Cari Kategori");
+        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtCari.setText("Cari Kategori");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -154,14 +156,14 @@ public class KategoriView extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
                 .addGap(59, 59, 59))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1)
+                .addComponent(txtCari)
                 .addContainerGap())
         );
 
@@ -190,6 +192,10 @@ public class KategoriView extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public javax.swing.JTextField getTxtCari() {
+        return txtCari;
+    }
 
     /**
      * @param args the command line arguments
@@ -232,8 +238,8 @@ public class KategoriView extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tblKategori;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtIdKategori;
     private javax.swing.JTextField txtNamaKategori;
     private javax.swing.JTextField txtNoRak;

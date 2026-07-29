@@ -16,6 +16,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import javax.swing.RowFilter;
 
 /**
  * Controller untuk menangani logika CRUD Master Data Barang.
@@ -75,6 +78,25 @@ public class BarangController {
                 }
             }
         });
+
+        // Event pencarian
+        view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyReleased(java.awt.event.KeyEvent e) {
+                String keyword = view.getTxtCari().getText();
+                if (keyword.equals("Cari Barang...")) {
+                    keyword = "";
+                }
+                filterData(keyword);
+            }
+        });
+    }
+
+    private void filterData(String keyword) {
+        DefaultTableModel model = (DefaultTableModel) view.getTblBarang().getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
+        view.getTblBarang().setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter("(?i)" + keyword));
     }
 
     public void loadKategori() {

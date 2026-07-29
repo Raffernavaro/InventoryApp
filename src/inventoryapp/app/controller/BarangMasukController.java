@@ -22,6 +22,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import javax.swing.RowFilter;
 
 /**
  * Controller untuk mengelola Transaksi Barang Masuk.
@@ -52,6 +54,24 @@ public class BarangMasukController {
     private void initController() {
         view.getBtnTambahKeranjang().addActionListener(e -> tambahKeranjang());
         view.getBtnSimpanTransaksi().addActionListener(e -> simpanTransaksi());
+
+        view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyReleased(java.awt.event.KeyEvent e) {
+                String keyword = view.getTxtCari().getText();
+                if (keyword.equals("Cari di Keranjang...")) {
+                    keyword = "";
+                }
+                filterKeranjang(keyword);
+            }
+        });
+    }
+
+    private void filterKeranjang(String keyword) {
+        DefaultTableModel model = (DefaultTableModel) view.getTblBarangMasuk().getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
+        view.getTblBarangMasuk().setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter("(?i)" + keyword));
     }
 
     public void loadBarang() {

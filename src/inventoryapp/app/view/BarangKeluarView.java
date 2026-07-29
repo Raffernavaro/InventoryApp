@@ -32,6 +32,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         txtTanggalKeluar.setText(LocalDate.now().toString());
         TextFieldHelper.setReadOnly(txtTanggalKeluar);
         TextFieldHelper.setPlaceholder(txtJumlahBarangKeluar, "Jumlah Barang Keluar");
+        TextFieldHelper.setPlaceholder(txtCari, "Cari di Keranjang...");
 
         controller = new BarangKeluarController(this);
         controller.loadBarang();
@@ -59,7 +60,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         btnTambahKeranjang = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -177,11 +178,11 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jTextField1.setText("Cari Barang");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtCari.setText("Cari Barang");
+        txtCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtCariActionPerformed(evt);
             }
         });
 
@@ -191,14 +192,14 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
                 .addGap(59, 59, 59))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1)
+                .addComponent(txtCari)
                 .addContainerGap())
         );
 
@@ -246,9 +247,9 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahKeranjangActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtCariActionPerformed
 
     public javax.swing.JTextField getTxtTanggalKeluar() {
         return txtTanggalKeluar;
@@ -278,6 +279,10 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         return tblBarangKeluar;
     }
 
+    public javax.swing.JTextField getTxtCari() {
+        return txtCari;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -292,8 +297,8 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tblBarangKeluar;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtJumlahBarangKeluar;
     private javax.swing.JTextField txtTanggalKeluar;
     // End of variables declaration//GEN-END:variables

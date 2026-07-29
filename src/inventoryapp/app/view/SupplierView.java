@@ -34,6 +34,7 @@ public class SupplierView extends javax.swing.JInternalFrame {
         TextFieldHelper.setPlaceholder(txtNamaSupplier, "Nama Supplier");
         TextFieldHelper.setPlaceholder(txtAlamat, "Alamat");
         TextFieldHelper.setPlaceholder(txtNoTelp, "No. Telp");
+        TextFieldHelper.setPlaceholder(txtCari, "Cari Supplier...");
 
         controller = new SupplierController(this);
         controller.loadData();
@@ -62,7 +63,7 @@ public class SupplierView extends javax.swing.JInternalFrame {
         txtNamaSupplier = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -195,8 +196,8 @@ public class SupplierView extends javax.swing.JInternalFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jTextField1.setText("Cari Supplier");
+        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtCari.setText("Cari Supplier");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -204,14 +205,14 @@ public class SupplierView extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
                 .addGap(59, 59, 59))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1)
+                .addComponent(txtCari)
                 .addContainerGap())
         );
 
@@ -303,6 +304,10 @@ public class SupplierView extends javax.swing.JInternalFrame {
         return tblSupplier;
     }
 
+    public javax.swing.JTextField getTxtCari() {
+        return txtCari;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -316,9 +321,9 @@ public class SupplierView extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tblSupplier;
     private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtIdSupplier;
     private javax.swing.JTextField txtKodeSupplier;
     private javax.swing.JTextField txtNamaSupplier;

@@ -11,6 +11,9 @@ import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import javax.swing.RowFilter;
 
 /**
  *
@@ -50,6 +53,25 @@ public class KategoriController {
                 }
             }
         });
+
+        // Event pencarian
+        view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyReleased(java.awt.event.KeyEvent e) {
+                String keyword = view.getTxtCari().getText();
+                if (keyword.equals("Cari Kategori...")) {
+                    keyword = "";
+                }
+                filterData(keyword);
+            }
+        });
+    }
+
+    private void filterData(String keyword) {
+        DefaultTableModel model = (DefaultTableModel) view.getTblKategori().getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
+        view.getTblKategori().setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter("(?i)" + keyword));
     }
 
     public void loadData() {

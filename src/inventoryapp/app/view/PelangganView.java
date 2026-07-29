@@ -22,7 +22,7 @@ public class PelangganView extends javax.swing.JInternalFrame {
      */
     public PelangganView() {
         initComponents();
-        
+
         setClosable(true);
         setResizable(true);
         setMaximizable(true);
@@ -34,6 +34,7 @@ public class PelangganView extends javax.swing.JInternalFrame {
         TextFieldHelper.setPlaceholder(txtNamaPelanggan, "Nama Pelanggan");
         TextFieldHelper.setPlaceholder(txtAlamat, "Alamat");
         TextFieldHelper.setPlaceholder(txtNoTelp, "No. Telp");
+        TextFieldHelper.setPlaceholder(txtCari, "Cari Pelanggan...");
 
         controller = new PelangganController(this);
         controller.loadData();
@@ -62,7 +63,7 @@ public class PelangganView extends javax.swing.JInternalFrame {
         txtNamaPelanggan = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -194,11 +195,11 @@ public class PelangganView extends javax.swing.JInternalFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jTextField1.setText("Cari Pelanggan");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtCari.setText("Cari Pelanggan");
+        txtCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtCariActionPerformed(evt);
             }
         });
 
@@ -208,14 +209,14 @@ public class PelangganView extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1)
+                .addComponent(txtCari)
                 .addContainerGap())
         );
 
@@ -267,9 +268,9 @@ public class PelangganView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaPelangganActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtCariActionPerformed
 
     private void txtAlamatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -311,6 +312,10 @@ public class PelangganView extends javax.swing.JInternalFrame {
         return tblPelanggan;
     }
 
+    public javax.swing.JTextField getTxtCari() {
+        return txtCari;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -324,9 +329,9 @@ public class PelangganView extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tblPelanggan;
     private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtIdPelanggan;
     private javax.swing.JTextField txtKodePelanggan;
     private javax.swing.JTextField txtNamaPelanggan;

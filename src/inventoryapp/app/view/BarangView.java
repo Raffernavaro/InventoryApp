@@ -35,6 +35,7 @@ public class BarangView extends javax.swing.JInternalFrame {
         TextFieldHelper.setPlaceholder(txtNamaBarang, "Nama Barang");
         TextFieldHelper.setPlaceholder(txtSatuan, "Satuan");
         TextFieldHelper.setPlaceholder(txtStok, "Stok");
+        TextFieldHelper.setPlaceholder(txtCari, "Cari Barang...");
 
         controller = new BarangController(this);
         controller.loadKategori();
@@ -65,7 +66,7 @@ public class BarangView extends javax.swing.JInternalFrame {
         txtSatuan = new javax.swing.JTextField();
         cmbKategori = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
+        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -208,8 +209,8 @@ public class BarangView extends javax.swing.JInternalFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 51));
 
-        jTextField3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jTextField3.setText("Cari Barang");
+        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtCari.setText("Cari Barang");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -217,14 +218,14 @@ public class BarangView extends javax.swing.JInternalFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
                 .addGap(59, 59, 59))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField3)
+                .addComponent(txtCari)
                 .addContainerGap())
         );
 
@@ -324,6 +325,10 @@ public class BarangView extends javax.swing.JInternalFrame {
         return tblBarang;
     }
 
+    public javax.swing.JTextField getTxtCari() {
+        return txtCari;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -338,8 +343,8 @@ public class BarangView extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTable tblBarang;
+    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtIdBarang;
     private javax.swing.JTextField txtKodeBarang;
     private javax.swing.JTextField txtNamaBarang;

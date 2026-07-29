@@ -11,7 +11,11 @@ import inventoryapp.config.Database;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
+import java.sql.SQLException;
 import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import javax.swing.RowFilter;
 
 /**
  * Controller untuk menangani logika CRUD Master Data Supplier.
@@ -56,6 +60,25 @@ public class SupplierController {
                 }
             }
         });
+
+        // Event pencarian
+        view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyReleased(java.awt.event.KeyEvent e) {
+                String keyword = view.getTxtCari().getText();
+                if (keyword.equals("Cari Supplier...")) {
+                    keyword = "";
+                }
+                filterData(keyword);
+            }
+        });
+    }
+
+    private void filterData(String keyword) {
+        DefaultTableModel model = (DefaultTableModel) view.getTblSupplier().getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
+        view.getTblSupplier().setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter("(?i)" + keyword));
     }
 
     public void loadData() {
