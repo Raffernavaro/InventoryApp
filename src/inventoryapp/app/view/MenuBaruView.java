@@ -305,6 +305,7 @@ public class MenuBaruView extends javax.swing.JFrame {
 
     private void jButtonRiwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRiwayatActionPerformed
         // TODO add your handling code here:
+        bukaMenu(new RiwayatView());
     }//GEN-LAST:event_jButtonRiwayatActionPerformed
 
     /**
