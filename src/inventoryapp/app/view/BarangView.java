@@ -55,9 +55,6 @@ public class BarangView extends javax.swing.JInternalFrame {
         txtIdBarang = new javax.swing.JTextField();
         txtKodeBarang = new javax.swing.JTextField();
         txtStok = new javax.swing.JTextField();
-        btnSimpan = new javax.swing.JButton();
-        btnRefresh = new javax.swing.JButton();
-        btnHapus = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblBarang = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
@@ -65,8 +62,10 @@ public class BarangView extends javax.swing.JInternalFrame {
         txtNamaBarang = new javax.swing.JTextField();
         txtSatuan = new javax.swing.JTextField();
         cmbKategori = new javax.swing.JComboBox<>();
-        jPanel4 = new javax.swing.JPanel();
+        btnSimpan = new javax.swing.JButton();
         txtCari = new javax.swing.JTextField();
+        btnHapus = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -79,7 +78,7 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtIdBarangActionPerformed(evt);
             }
         });
-        jPanel5.add(txtIdBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 296, 870, 30));
+        jPanel5.add(txtIdBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 870, 30));
 
         txtKodeBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtKodeBarang.setForeground(new java.awt.Color(204, 204, 204));
@@ -99,36 +98,6 @@ public class BarangView extends javax.swing.JInternalFrame {
             }
         });
         jPanel5.add(txtStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 255, 870, 30));
-
-        btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
-        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnSimpan.setText("Simpan");
-        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpanActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 393, 103, 50));
-
-        btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
-        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnRefresh.setText("Refresh");
-        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefreshActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 393, -1, 50));
-
-        btnHapus.setBackground(new java.awt.Color(255, 0, 51));
-        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnHapus.setText("Hapus");
-        btnHapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHapusActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 393, 103, 50));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -152,7 +121,7 @@ public class BarangView extends javax.swing.JInternalFrame {
         tblBarang.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarang);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 454, -1, 231));
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 454, 950, 231));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -164,10 +133,10 @@ public class BarangView extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(436, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(432, 432, 432))
+                .addContainerGap(858, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,31 +174,36 @@ public class BarangView extends javax.swing.JInternalFrame {
                 cmbKategoriActionPerformed(evt);
             }
         });
-        jPanel5.add(cmbKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 337, 870, 30));
+        jPanel5.add(cmbKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 870, 30));
 
-        jPanel4.setBackground(new java.awt.Color(0, 0, 51));
+        btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
+        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnSimpan.setText("Simpan");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, 50));
 
         txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        txtCari.setText("Cari Barang");
+        txtCari.setText("Cari Kategori");
+        jPanel5.add(txtCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 431, -1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
-                .addGap(59, 59, 59))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari)
-                .addContainerGap())
-        );
+        btnHapus.setBackground(new java.awt.Color(255, 0, 51));
+        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, 50));
 
-        jPanel5.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+        btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
+        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnRefresh.setText("Refresh");
+        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, -1, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -261,18 +235,6 @@ public class BarangView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStokActionPerformed
 
-    private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSimpanActionPerformed
-
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRefreshActionPerformed
-
-    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHapusActionPerformed
-
     private void txtNamaBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaBarangActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaBarangActionPerformed
@@ -284,6 +246,14 @@ public class BarangView extends javax.swing.JInternalFrame {
     private void cmbKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbKategoriActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbKategoriActionPerformed
+
+    private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimpanActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     public javax.swing.JTextField getTxtIdBarang() {
         return txtIdBarang;
@@ -340,7 +310,6 @@ public class BarangView extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> cmbKategori;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblBarang;

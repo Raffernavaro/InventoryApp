@@ -32,7 +32,6 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         txtTanggalKeluar.setText(LocalDate.now().toString());
         TextFieldHelper.setReadOnly(txtTanggalKeluar);
         TextFieldHelper.setPlaceholder(txtJumlahBarangKeluar, "Jumlah Barang Keluar");
-        TextFieldHelper.setPlaceholder(txtCari, "Cari di Keranjang...");
 
         controller = new BarangKeluarController(this);
         controller.loadBarang();
@@ -59,8 +58,6 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         btnTambahKeranjang = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -109,7 +106,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         tblBarangKeluar.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarangKeluar);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, 270));
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 950, 270));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -122,9 +119,9 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(368, 368, 368)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(754, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,7 +140,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
                 txtJumlahBarangKeluarActionPerformed(evt);
             }
         });
-        jPanel5.add(txtJumlahBarangKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 870, 30));
+        jPanel5.add(txtJumlahBarangKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 870, 30));
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
@@ -163,7 +160,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel5.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 870, 30));
+        jPanel5.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 870, 30));
 
         btnTambahKeranjang.setBackground(new java.awt.Color(0, 0, 204));
         btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -175,35 +172,6 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
             }
         });
         jPanel5.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, 50));
-
-        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
-
-        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        txtCari.setText("Cari Barang");
-        txtCari.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCariActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
-                .addGap(59, 59, 59))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari)
-                .addContainerGap())
-        );
-
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -247,10 +215,6 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTambahKeranjangActionPerformed
 
-    private void txtCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCariActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCariActionPerformed
-
     public javax.swing.JTextField getTxtTanggalKeluar() {
         return txtTanggalKeluar;
     }
@@ -279,9 +243,7 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         return tblBarangKeluar;
     }
 
-    public javax.swing.JTextField getTxtCari() {
-        return txtCari;
-    }
+  
 
     /**
      * @param args the command line arguments
@@ -294,11 +256,9 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblBarangKeluar;
-    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtJumlahBarangKeluar;
     private javax.swing.JTextField txtTanggalKeluar;
     // End of variables declaration//GEN-END:variables

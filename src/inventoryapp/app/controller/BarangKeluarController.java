@@ -55,16 +55,7 @@ public class BarangKeluarController {
         view.getBtnTambahKeranjang().addActionListener(e -> tambahKeranjang());
         view.getBtnSimpanTransaksi().addActionListener(e -> simpanTransaksi());
 
-        view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
-            @Override
-            public void keyReleased(java.awt.event.KeyEvent e) {
-                String keyword = view.getTxtCari().getText();
-                if (keyword.equals("Cari di Keranjang...")) {
-                    keyword = "";
-                }
-                filterKeranjang(keyword);
-            }
-        });
+       
     }
 
     private void filterKeranjang(String keyword) {

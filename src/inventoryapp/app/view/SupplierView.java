@@ -53,16 +53,15 @@ public class SupplierView extends javax.swing.JInternalFrame {
         txtIdSupplier = new javax.swing.JTextField();
         txtKodeSupplier = new javax.swing.JTextField();
         txtNoTelp = new javax.swing.JTextField();
-        btnSimpan = new javax.swing.JButton();
-        btnRefresh = new javax.swing.JButton();
-        btnHapus = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblSupplier = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNamaSupplier = new javax.swing.JTextField();
         txtAlamat = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
+        btnSimpan = new javax.swing.JButton();
+        btnHapus = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
         txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -76,7 +75,7 @@ public class SupplierView extends javax.swing.JInternalFrame {
                 txtIdSupplierActionPerformed(evt);
             }
         });
-        jPanel5.add(txtIdSupplier, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 870, 30));
+        jPanel5.add(txtIdSupplier, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 870, 30));
 
         txtKodeSupplier.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtKodeSupplier.setForeground(new java.awt.Color(204, 204, 204));
@@ -95,36 +94,6 @@ public class SupplierView extends javax.swing.JInternalFrame {
             }
         });
         jPanel5.add(txtNoTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 870, 30));
-
-        btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
-        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnSimpan.setText("Simpan");
-        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpanActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, 50));
-
-        btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
-        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnRefresh.setText("Refresh");
-        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRefreshActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, -1, 50));
-
-        btnHapus.setBackground(new java.awt.Color(255, 0, 51));
-        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnHapus.setText("Hapus");
-        btnHapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHapusActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, -1, 50));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -149,7 +118,7 @@ public class SupplierView extends javax.swing.JInternalFrame {
         tblSupplier.setRowHeight(30);
         jScrollPane3.setViewportView(tblSupplier);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, 270));
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 950, 290));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -161,10 +130,10 @@ public class SupplierView extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(415, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(432, 432, 432))
+                .addContainerGap(837, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,29 +163,29 @@ public class SupplierView extends javax.swing.JInternalFrame {
         });
         jPanel5.add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 870, 30));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
+        btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
+        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnSimpan.setText("Simpan");
+        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, 50));
+
+        btnHapus.setBackground(new java.awt.Color(255, 0, 51));
+        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, -1, 50));
+
+        btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
+        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnRefresh.setText("Refresh");
+        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, -1, 50));
 
         txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        txtCari.setText("Cari Supplier");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
-                .addGap(59, 59, 59))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari)
-                .addContainerGap())
-        );
-
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+        txtCari.setText("Cari Kategori");
+        jPanel5.add(txtCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 431, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -244,18 +213,6 @@ public class SupplierView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaSupplierActionPerformed
 
-    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHapusActionPerformed
-
-    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRefreshActionPerformed
-
-    private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSimpanActionPerformed
-
     private void txtNoTelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoTelpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNoTelpActionPerformed
@@ -267,6 +224,10 @@ public class SupplierView extends javax.swing.JInternalFrame {
     private void txtIdSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdSupplierActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdSupplierActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     public javax.swing.JTextField getTxtIdSupplier() {
         return txtIdSupplier;
@@ -318,7 +279,6 @@ public class SupplierView extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSimpan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblSupplier;
