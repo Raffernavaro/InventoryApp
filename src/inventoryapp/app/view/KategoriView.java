@@ -62,7 +62,6 @@ public class KategoriView extends javax.swing.JInternalFrame {
         tblKategori = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -71,7 +70,7 @@ public class KategoriView extends javax.swing.JInternalFrame {
 
         txtIdKategori.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtIdKategori.setForeground(new java.awt.Color(204, 204, 204));
-        jPanel5.add(txtIdKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 870, 30));
+        jPanel5.add(txtIdKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 870, 30));
 
         txtNamaKategori.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtNamaKategori.setForeground(new java.awt.Color(204, 204, 204));
@@ -84,17 +83,17 @@ public class KategoriView extends javax.swing.JInternalFrame {
         btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
         btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnSimpan.setText("Simpan");
-        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, 50));
+        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, 50));
 
         btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
         btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnRefresh.setText("Refresh");
-        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, -1, 50));
+        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, 50));
 
         btnHapus.setBackground(new java.awt.Color(255, 0, 51));
         btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnHapus.setText("Hapus");
-        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 310, -1, 50));
+        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, 50));
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -118,7 +117,7 @@ public class KategoriView extends javax.swing.JInternalFrame {
         tblKategori.setRowHeight(30);
         jScrollPane3.setViewportView(tblKategori);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, 310));
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 950, 310));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -130,10 +129,10 @@ public class KategoriView extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(430, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(412, 412, 412))
+                .addContainerGap(832, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,29 +144,9 @@ public class KategoriView extends javax.swing.JInternalFrame {
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 60));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
-
         txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txtCari.setText("Cari Kategori");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
-                .addGap(59, 59, 59))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari)
-                .addContainerGap())
-        );
-
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+        jPanel5.add(txtCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 431, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,7 +214,6 @@ public class KategoriView extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSimpan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblKategori;

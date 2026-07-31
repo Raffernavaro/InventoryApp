@@ -32,7 +32,6 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
         txtTanggalMasuk.setText(LocalDate.now().toString());
         TextFieldHelper.setReadOnly(txtTanggalMasuk);
         TextFieldHelper.setPlaceholder(txtJumlahBarangMasuk, "Jumlah Barang Masuk");
-        TextFieldHelper.setPlaceholder(txtCari, "Cari di Keranjang...");
 
         controller = new BarangMasukController(this);
         controller.loadBarang();
@@ -59,8 +58,6 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         btnTambahKeranjang = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        txtCari = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -73,7 +70,7 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
                 txtTanggalMasukActionPerformed(evt);
             }
         });
-        jPanel5.add(txtTanggalMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 870, 30));
+        jPanel5.add(txtTanggalMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 870, 30));
 
         btnSimpanTransaksi.setBackground(new java.awt.Color(255, 255, 255));
         btnSimpanTransaksi.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -108,7 +105,7 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
         tblBarangMasuk.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarangMasuk);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, 270));
+        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 950, 270));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -121,9 +118,9 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(375, 375, 375)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(764, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,7 +159,7 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel5.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 870, 30));
+        jPanel5.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 870, 30));
 
         btnTambahKeranjang.setBackground(new java.awt.Color(0, 0, 204));
         btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -174,30 +171,6 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
             }
         });
         jPanel5.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, 50));
-
-        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
-
-        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        txtCari.setText("Cari Barang");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
-                .addGap(59, 59, 59))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtCari)
-                .addContainerGap())
-        );
-
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -269,10 +242,6 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
         return tblBarangMasuk;
     }
 
-    public javax.swing.JTextField getTxtCari() {
-        return txtCari;
-    }
-
     /**
      * @param args the command line arguments
      */
@@ -284,11 +253,9 @@ public class BarangMasukView extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblBarangMasuk;
-    private javax.swing.JTextField txtCari;
     private javax.swing.JTextField txtJumlahBarangMasuk;
     private javax.swing.JTextField txtTanggalMasuk;
     // End of variables declaration//GEN-END:variables
