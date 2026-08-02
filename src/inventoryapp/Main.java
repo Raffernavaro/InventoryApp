@@ -26,7 +26,7 @@ public class Main {
     
         SwingUtilities.invokeLater(() -> {
             LoginView loginView = new LoginView();
-            new LoginController(loginView); // Pasang controller di sini
+            new LoginController(loginView);
             loginView.setLocationRelativeTo(null);
             loginView.setVisible(true);
         });

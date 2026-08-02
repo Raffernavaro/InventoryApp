@@ -54,8 +54,6 @@ public class RiwayatView extends javax.swing.JInternalFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
         tblRiwayat.setModel(new javax.swing.table.DefaultTableModel(
@@ -78,8 +76,6 @@ public class RiwayatView extends javax.swing.JInternalFrame {
         tblRiwayat.setRowHeight(30);
         jScrollPane3.setViewportView(tblRiwayat);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 1160, 520));
-
         cmbKategori.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cmbKategori.setForeground(new java.awt.Color(153, 153, 153));
         cmbKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jenis Transaksi", "Barang Masuk", "Barang Keluar" }));
@@ -88,7 +84,6 @@ public class RiwayatView extends javax.swing.JInternalFrame {
                 cmbKategoriActionPerformed(evt);
             }
         });
-        jPanel5.add(cmbKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 260, 30));
 
         txtCari.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtCari.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +91,6 @@ public class RiwayatView extends javax.swing.JInternalFrame {
                 txtCariActionPerformed(evt);
             }
         });
-        jPanel5.add(txtCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 100, 260, 30));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -111,7 +105,7 @@ public class RiwayatView extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(1020, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,20 +115,34 @@ public class RiwayatView extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, -1));
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(cmbKategori, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(640, 640, 640)
+                        .addComponent(txtCari))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel5, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

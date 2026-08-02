@@ -44,7 +44,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
         btnTambahKeranjang = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel9.setPreferredSize(new java.awt.Dimension(1085, 660));
 
@@ -102,8 +102,8 @@ public class LaporanView extends javax.swing.JInternalFrame {
                 .addGap(110, 110, 110))
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(424, 424, 424))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
