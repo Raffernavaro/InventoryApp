@@ -3,6 +3,7 @@ package inventoryapp.app.controller;
 import inventoryapp.app.dao.KategoriDAO;
 import inventoryapp.app.helper.AlertHelper;
 import inventoryapp.app.helper.TableHelper;
+import inventoryapp.app.helper.TextFieldHelper;
 import inventoryapp.app.model.Kategori;
 import inventoryapp.app.view.KategoriView;
 import inventoryapp.config.Database;
@@ -25,7 +26,7 @@ public class KategoriController {
     private KategoriDAO dao;
 
     public KategoriController(KategoriView view) {
-        System.out.println(">>> CONTROLLER BERHASIL DIBUAT! <<<"); // Tes ini dulu!
+        System.out.println(">>> CONTROLLER BERHASIL DIBUAT! <<<");
         this.view = view;
         try {
             this.dao = new KategoriDAO(Database.getKoneksi());
@@ -36,7 +37,6 @@ public class KategoriController {
     }
 
     private void initController() {
-        // Tombol Simpan sekarang memanggil logika pengecekan simpan()
         view.getBtnSimpan().addActionListener(e -> simpan());
         view.getBtnHapus().addActionListener(e -> hapus());
         view.getBtnRefresh().addActionListener(e -> resetForm());
@@ -46,10 +46,12 @@ public class KategoriController {
             @Override
             public void mouseClicked(MouseEvent e) {
                 int row = view.getTblKategori().getSelectedRow();
+                // Konversi row index jika menggunakan TableRowSorter (Penting saat tabel difilter)
                 if (row != -1) {
-                    view.getTxtIdKategori().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(row, 0).toString());
-                    view.getTxtNamaKategori().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(row, 1).toString());
-                    view.getTxtNoRak().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(row, 2).toString());
+                    int modelRow = view.getTblKategori().convertRowIndexToModel(row);
+                    view.getTxtIdKategori().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(modelRow, 0).toString());
+                    view.getTxtNamaKategori().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(modelRow, 1).toString());
+                    view.getTxtNoRak().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(modelRow, 2).toString());
                 }
             }
         });
@@ -89,15 +91,12 @@ public class KategoriController {
         }
     }
 
-    // LOGIKA UTAMA: Cek apakah ID ada atau kosong
     private void simpan() {
         String idStr = view.getTxtIdKategori().getText().trim();
 
-        System.out.println(idStr);
-        if ("ID Kategori (OTOMATIS)".equals(idStr)) {
+        if (idStr.isEmpty() || "ID Kategori (OTOMATIS)".equals(idStr)) {
             tambah();
         } else {
-            System.out.println("Aku DIubah ");
             ubah();
         }
     }
@@ -106,10 +105,12 @@ public class KategoriController {
         String nama = view.getTxtNamaKategori().getText().trim();
         String noRakStr = view.getTxtNoRak().getText().trim();
 
-        if (nama.isEmpty() || noRakStr.isEmpty()) {
+        // Cek apakah input masih berupa placeholder bawaan helper
+        if (nama.isEmpty() || noRakStr.isEmpty() || nama.equals("Nama Kategori") || noRakStr.equals("No.Rak")) {
             JOptionPane.showMessageDialog(view, "Data tidak boleh kosong!");
             return;
         }
+        
         String cleanNoRak = noRakStr.replaceAll("[^0-9]", "");
         try {
             int noRak = Integer.parseInt(cleanNoRak);
@@ -127,10 +128,11 @@ public class KategoriController {
         String nama = view.getTxtNamaKategori().getText().trim();
         String noRakStr = view.getTxtNoRak().getText().trim();
 
-        if (nama.isEmpty() || noRakStr.isEmpty()) {
+        if (nama.isEmpty() || noRakStr.isEmpty() || nama.equals("Nama Kategori") || noRakStr.equals("No.Rak")) {
             JOptionPane.showMessageDialog(view, "Data tidak boleh kosong!");
             return;
         }
+        
         String cleanNoRak = noRakStr.replaceAll("[^0-9]", "");
 
         try {
@@ -147,7 +149,7 @@ public class KategoriController {
 
     private void hapus() {
         String idStr = view.getTxtIdKategori().getText().trim();
-        if (idStr.isEmpty()) {
+        if (idStr.isEmpty() || "ID Kategori (OTOMATIS)".equals(idStr)) {
             JOptionPane.showMessageDialog(view, "Pilih data di tabel terlebih dahulu!");
             return;
         }
@@ -166,10 +168,10 @@ public class KategoriController {
     }
 
     private void resetForm() {
-        view.getTxtIdKategori().setText("");
-        view.getTxtNamaKategori().setText("");
-        view.getTxtNoRak().setText("");
-        view.getTblKategori().clearSelection(); 
-        loadData();
+        // Mengembalikan placeholder seperti saat form pertama kali dibuka
+        TextFieldHelper.setPlaceholder(view.getTxtIdKategori(), "ID Kategori (OTOMATIS)");
+        TextFieldHelper.setReadOnly(view.getTxtIdKategori());
+        TextFieldHelper.setPlaceholder(view.getTxtNamaKategori(), "Nama Kategori");
+        TextFieldHelper.setPlaceholder(view.getTxtNoRak(), "No.Rak");
     }
 }

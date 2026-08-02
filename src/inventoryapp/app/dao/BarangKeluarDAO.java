@@ -19,6 +19,23 @@ public class BarangKeluarDAO {
     public BarangKeluarDAO(Connection conn) {
         this.conn = conn;
     }
+    
+    public int getTotalProductSold() {
+        String sql = "SELECT COALESCE(SUM(jumlah), 0) AS total FROM trbarang_keluar_detail";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                return rs.getInt("total");
+            }
+            
+        } catch (SQLException e) {
+            System.err.println("Error getTotalProductSold: " + e.getMessage());
+        }
+
+        return 0;
+    }
 
     public boolean simpanTransaksi(BarangKeluar bk, List<BarangKeluarDetail> details) {
         String sqlHeader = "INSERT INTO trbarang_keluar (tgl, id_petugas, id_pelanggan) VALUES (?, ?, ?)";

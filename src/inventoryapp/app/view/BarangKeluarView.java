@@ -15,15 +15,15 @@ import java.time.LocalDate;
  * @author THINKPAD X240
  */
 public class BarangKeluarView extends javax.swing.JInternalFrame {
-
+    
     private BarangKeluarController controller;
-
+    
     /**
-     * Creates new form BarangKeluarView
+     * Creates new form BarangKeluarBaruView
      */
     public BarangKeluarView() {
         initComponents();
-
+        
         setClosable(true);
         setResizable(true);
         setMaximizable(true);
@@ -47,22 +47,44 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel5 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         txtTanggalKeluar = new javax.swing.JTextField();
+        txtJumlahBarangKeluar = new javax.swing.JTextField();
         btnSimpanTransaksi = new javax.swing.JButton();
+        btnTambahKeranjang = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblBarangKeluar = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        txtJumlahBarangKeluar = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
-        btnTambahKeranjang = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel5.setPreferredSize(new java.awt.Dimension(970, 660));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel9.setPreferredSize(new java.awt.Dimension(1085, 660));
+
+        jPanel10.setBackground(new java.awt.Color(0, 0, 51));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel6.setText("BARANG KELUAR");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addContainerGap(924, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addContainerGap())
+        );
 
         txtTanggalKeluar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtTanggalKeluar.setForeground(new java.awt.Color(204, 204, 204));
@@ -71,18 +93,28 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
                 txtTanggalKeluarActionPerformed(evt);
             }
         });
-        jPanel5.add(txtTanggalKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 870, 30));
 
-        btnSimpanTransaksi.setBackground(new java.awt.Color(255, 255, 255));
+        txtJumlahBarangKeluar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtJumlahBarangKeluar.setForeground(new java.awt.Color(204, 204, 204));
+        txtJumlahBarangKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtJumlahBarangKeluarActionPerformed(evt);
+            }
+        });
+
         btnSimpanTransaksi.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnSimpanTransaksi.setForeground(new java.awt.Color(51, 51, 255));
+        btnSimpanTransaksi.setForeground(new java.awt.Color(0, 0, 255));
         btnSimpanTransaksi.setText("Simpan Transaksi");
         btnSimpanTransaksi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanTransaksiActionPerformed(evt);
             }
         });
-        jPanel5.add(btnSimpanTransaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 650, -1, 50));
+
+        btnTambahKeranjang.setBackground(new java.awt.Color(0, 0, 204));
+        btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnTambahKeranjang.setForeground(new java.awt.Color(240, 240, 240));
+        btnTambahKeranjang.setText("Tambah Keranjang");
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -106,41 +138,14 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         tblBarangKeluar.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarangKeluar);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 950, 270));
-
-        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel1.setText("BARANG KELUAR");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(754, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-
-        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 60));
-
-        txtJumlahBarangKeluar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtJumlahBarangKeluar.setForeground(new java.awt.Color(204, 204, 204));
-        txtJumlahBarangKeluar.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(153, 153, 153));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Supplier" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtJumlahBarangKeluarActionPerformed(evt);
+                jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel5.add(txtJumlahBarangKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 870, 30));
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
@@ -150,42 +155,65 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel5.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 870, 30));
 
-        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Supplier" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 870, 30));
-
-        btnTambahKeranjang.setBackground(new java.awt.Color(0, 0, 204));
-        btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnTambahKeranjang.setForeground(new java.awt.Color(255, 255, 255));
-        btnTambahKeranjang.setText("Tambah Ke Keranjang");
-        btnTambahKeranjang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTambahKeranjangActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, 50));
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(419, 419, 419)
+                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnSimpanTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(txtTanggalKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                        .addComponent(txtJumlahBarangKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(110, 110, 110))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTanggalKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtJumlahBarangKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(btnSimpanTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 970, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
         );
 
         pack();
@@ -195,25 +223,21 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTanggalKeluarActionPerformed
 
-    private void btnSimpanTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanTransaksiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSimpanTransaksiActionPerformed
-
     private void txtJumlahBarangKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahBarangKeluarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtJumlahBarangKeluarActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void btnSimpanTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanTransaksiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_btnSimpanTransaksiActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
-    private void btnTambahKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahKeranjangActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnTambahKeranjangActionPerformed
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     public javax.swing.JTextField getTxtTanggalKeluar() {
         return txtTanggalKeluar;
@@ -243,20 +267,14 @@ public class BarangKeluarView extends javax.swing.JInternalFrame {
         return tblBarangKeluar;
     }
 
-  
-
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSimpanTransaksi;
     private javax.swing.JButton btnTambahKeranjang;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblBarangKeluar;
     private javax.swing.JTextField txtJumlahBarangKeluar;

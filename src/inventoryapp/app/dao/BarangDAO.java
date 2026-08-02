@@ -115,4 +115,22 @@ public class BarangDAO {
             System.err.println("Error delete Barang: " + e.getMessage());
         }
     }
+    
+    public int getTotalProduk() {
+        String sql = "SELECT COUNT(*) AS total FROM tmbarang";
+        int total = 0;
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                total = rs.getInt("total");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error getTotalProduk: " + e.getMessage());
+        }
+
+        return total;
+    }
 }
