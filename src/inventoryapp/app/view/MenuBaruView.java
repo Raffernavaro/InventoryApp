@@ -23,6 +23,17 @@ public class MenuBaruView extends javax.swing.JFrame {
         initComponents();
         labelNama.setText(UserSession.getSession().getNama());
         setExtendedState(MAXIMIZED_BOTH);
+        
+        java.awt.Color normal = java.awt.Color.WHITE;
+        java.awt.Color hover = new java.awt.Color(230, 230, 250);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton1, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton2, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton3, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton4, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton5, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton6, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButton7, normal, hover);
+        inventoryapp.app.helper.HoverButtonEffect.apply(jButtonRiwayat, normal, hover);
     }
 
     /**

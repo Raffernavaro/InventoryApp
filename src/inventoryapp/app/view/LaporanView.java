@@ -12,11 +12,11 @@ import inventoryapp.app.controller.LaporanController;
  * @author THINKPAD X240
  */
 public class LaporanView extends javax.swing.JInternalFrame {
-
+    
     private LaporanController controller;
-
+    
     /**
-     * Creates new form LaporanView
+     * Creates new form LaporanBaru
      */
     public LaporanView() {
         initComponents();
@@ -38,37 +38,15 @@ public class LaporanView extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel19 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        btnTambahKeranjang = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        btnTambahKeranjang = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel19.setPreferredSize(new java.awt.Dimension(970, 660));
-        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Laporan", "Laporan Persediaan", "Laporan Barang Masuk", "Laporan Barang Keluar" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        jPanel19.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 870, 30));
-
-        btnTambahKeranjang.setBackground(new java.awt.Color(255, 0, 51));
-        btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnTambahKeranjang.setForeground(new java.awt.Color(240, 240, 240));
-        btnTambahKeranjang.setText("Export PDF");
-        btnTambahKeranjang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTambahKeranjangActionPerformed(evt);
-            }
-        });
-        jPanel19.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 610, -1, 50));
+        jPanel9.setPreferredSize(new java.awt.Dimension(1085, 660));
 
         jPanel10.setBackground(new java.awt.Color(0, 0, 51));
 
@@ -83,7 +61,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addContainerGap(874, Short.MAX_VALUE))
+                .addContainerGap(905, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,35 +71,72 @@ public class LaporanView extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jPanel19.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, -1));
+        btnTambahKeranjang.setBackground(new java.awt.Color(255, 0, 0));
+        btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnTambahKeranjang.setForeground(new java.awt.Color(240, 240, 240));
+        btnTambahKeranjang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/app/image/icons8_file_26px.png"))); // NOI18N
+        btnTambahKeranjang.setText("  Export PDF");
+        btnTambahKeranjang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahKeranjangActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Laporan" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(110, 110, 110))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(377, 377, 377)
+                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(269, 269, 269)
+                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(276, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 970, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 1001, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnTambahKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahKeranjangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTambahKeranjangActionPerformed
+
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void btnTambahKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahKeranjangActionPerformed
-        if (controller != null) {
-            controller.exportPdf();
-        }
-    }//GEN-LAST:event_btnTambahKeranjangActionPerformed
 
     public javax.swing.JComboBox<String> getjComboBox1() {
         return jComboBox1;
@@ -131,15 +146,11 @@ public class LaporanView extends javax.swing.JInternalFrame {
         return btnTambahKeranjang;
     }
 
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTambahKeranjang;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 }
