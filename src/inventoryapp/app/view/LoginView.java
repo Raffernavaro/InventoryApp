@@ -125,6 +125,7 @@ public class LoginView extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("LOGIN");
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 

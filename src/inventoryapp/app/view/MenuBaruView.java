@@ -35,12 +35,23 @@ public class MenuBaruView extends javax.swing.JFrame {
         inventoryapp.app.helper.HoverButtonEffect.apply(jButton7, normal, hover);
         inventoryapp.app.helper.HoverButtonEffect.apply(jButtonRiwayat, normal, hover);
         
-        javax.swing.JLabel imgWelcome = new javax.swing.JLabel();
-        javax.swing.ImageIcon icon = new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/app/image/FRIV.png"));
-        imgWelcome.setIcon(icon);
-        imgWelcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgWelcome.setBounds(0, 0, jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
-        jDesktopPane1.add(imgWelcome);
+        javax.swing.ImageIcon icon = new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/app/image/content.png"));
+        javax.swing.JComponent bgComponent = new javax.swing.JComponent() {
+            @Override
+            protected void paintComponent(java.awt.Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        jDesktopPane1.setLayer(bgComponent, javax.swing.JLayeredPane.FRAME_CONTENT_LAYER);
+        jDesktopPane1.add(bgComponent);
+
+        jDesktopPane1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            @Override
+            public void componentResized(java.awt.event.ComponentEvent e) {
+                bgComponent.setBounds(0, 0, jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+            }
+        });
     }
 
     /**
@@ -69,6 +80,7 @@ public class MenuBaruView extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Storage System");
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 700));
@@ -327,7 +339,9 @@ public class MenuBaruView extends javax.swing.JFrame {
      */
     private void bukaMenu(JInternalFrame frame) {
 
-        jDesktopPane1.removeAll();
+        for (JInternalFrame f : jDesktopPane1.getAllFrames()) {
+            f.dispose();
+        }
         jDesktopPane1.repaint();
 
         currentFrame = frame;
