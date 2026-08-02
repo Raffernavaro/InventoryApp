@@ -16,14 +16,15 @@ import javax.swing.JTextField;
  * @author THINKPAD X240
  */
 public class BarangView extends javax.swing.JInternalFrame {
-
+    
     private BarangController controller;
-
+    
     /**
-     * Creates new form BarangView
+     * Creates new form BarangBaruView
      */
     public BarangView() {
         initComponents();
+        
         setClosable(true);
         setResizable(false);
         setMaximizable(true);
@@ -51,25 +52,58 @@ public class BarangView extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel5 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        txtCari = new javax.swing.JTextField();
         txtIdBarang = new javax.swing.JTextField();
         txtKodeBarang = new javax.swing.JTextField();
-        txtStok = new javax.swing.JTextField();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tblBarang = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         txtNamaBarang = new javax.swing.JTextField();
         txtSatuan = new javax.swing.JTextField();
+        txtStok = new javax.swing.JTextField();
         cmbKategori = new javax.swing.JComboBox<>();
         btnSimpan = new javax.swing.JButton();
-        txtCari = new javax.swing.JTextField();
         btnHapus = new javax.swing.JButton();
         btnRefresh = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblBarang = new javax.swing.JTable();
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel1.setText("BARANG");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel2.setText("BARANG");
+
+        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtCari.setText("Cari Barang");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         txtIdBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtIdBarang.setForeground(new java.awt.Color(204, 204, 204));
@@ -78,7 +112,6 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtIdBarangActionPerformed(evt);
             }
         });
-        jPanel5.add(txtIdBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 870, 30));
 
         txtKodeBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtKodeBarang.setForeground(new java.awt.Color(204, 204, 204));
@@ -87,7 +120,22 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtKodeBarangActionPerformed(evt);
             }
         });
-        jPanel5.add(txtKodeBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 135, 870, 30));
+
+        txtNamaBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtNamaBarang.setForeground(new java.awt.Color(204, 204, 204));
+        txtNamaBarang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNamaBarangActionPerformed(evt);
+            }
+        });
+
+        txtSatuan.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtSatuan.setForeground(new java.awt.Color(204, 204, 204));
+        txtSatuan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSatuanActionPerformed(evt);
+            }
+        });
 
         txtStok.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtStok.setForeground(new java.awt.Color(204, 204, 204));
@@ -97,7 +145,37 @@ public class BarangView extends javax.swing.JInternalFrame {
                 txtStokActionPerformed(evt);
             }
         });
-        jPanel5.add(txtStok, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 255, 870, 30));
+
+        cmbKategori.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cmbKategori.setForeground(new java.awt.Color(153, 153, 153));
+        cmbKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kategori" }));
+        cmbKategori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbKategoriActionPerformed(evt);
+            }
+        });
+
+        btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
+        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnSimpan.setText("Simpan");
+        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanActionPerformed(evt);
+            }
+        });
+
+        btnHapus.setBackground(new java.awt.Color(255, 0, 51));
+        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
+
+        btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
+        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnRefresh.setText("Refresh");
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(870, 271));
 
@@ -121,103 +199,69 @@ public class BarangView extends javax.swing.JInternalFrame {
         tblBarang.setRowHeight(30);
         jScrollPane3.setViewportView(tblBarang);
 
-        jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 454, 950, 231));
-
-        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel1.setText("BARANG");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(858, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtNamaBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtIdBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSatuan, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtKodeBarang)
+                        .addComponent(txtStok)
+                        .addComponent(cmbKategori, 0, 389, Short.MAX_VALUE))
+                    .addComponent(btnRefresh))
+                .addGap(110, 110, 110))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtIdBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKodeBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNamaBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtStok, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmbKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSatuan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
-
-        txtNamaBarang.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtNamaBarang.setForeground(new java.awt.Color(204, 204, 204));
-        txtNamaBarang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNamaBarangActionPerformed(evt);
-            }
-        });
-        jPanel5.add(txtNamaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 175, 870, 30));
-
-        txtSatuan.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtSatuan.setForeground(new java.awt.Color(204, 204, 204));
-        txtSatuan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSatuanActionPerformed(evt);
-            }
-        });
-        jPanel5.add(txtSatuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 215, 870, 30));
-
-        cmbKategori.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        cmbKategori.setForeground(new java.awt.Color(153, 153, 153));
-        cmbKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kategori" }));
-        cmbKategori.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbKategoriActionPerformed(evt);
-            }
-        });
-        jPanel5.add(cmbKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 870, 30));
-
-        btnSimpan.setBackground(new java.awt.Color(102, 255, 102));
-        btnSimpan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnSimpan.setText("Simpan");
-        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpanActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, 50));
-
-        txtCari.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        txtCari.setText("Cari Kategori");
-        jPanel5.add(txtCari, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 431, -1));
-
-        btnHapus.setBackground(new java.awt.Color(255, 0, 51));
-        btnHapus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnHapus.setText("Hapus");
-        btnHapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHapusActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, 50));
-
-        btnRefresh.setBackground(new java.awt.Color(0, 0, 204));
-        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnRefresh.setText("Refresh");
-        jPanel5.add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, -1, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -231,10 +275,6 @@ public class BarangView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtKodeBarangActionPerformed
 
-    private void txtStokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStokActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtStokActionPerformed
-
     private void txtNamaBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaBarangActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaBarangActionPerformed
@@ -242,6 +282,10 @@ public class BarangView extends javax.swing.JInternalFrame {
     private void txtSatuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSatuanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSatuanActionPerformed
+
+    private void txtStokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStokActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStokActionPerformed
 
     private void cmbKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbKategoriActionPerformed
         // TODO add your handling code here:
@@ -299,18 +343,15 @@ public class BarangView extends javax.swing.JInternalFrame {
         return txtCari;
     }
 
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnSimpan;
     private javax.swing.JComboBox<String> cmbKategori;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblBarang;
     private javax.swing.JTextField txtCari;

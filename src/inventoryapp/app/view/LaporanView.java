@@ -39,40 +39,15 @@ public class LaporanView extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel19 = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         btnTambahKeranjang = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel19.setPreferredSize(new java.awt.Dimension(970, 660));
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel20.setBackground(new java.awt.Color(0, 0, 51));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel10.setText("LAPORAN");
-
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(416, 416, 416)
-                .addComponent(jLabel10)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(jLabel10)
-                .addContainerGap())
-        );
-
-        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 60));
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
@@ -94,6 +69,31 @@ public class LaporanView extends javax.swing.JInternalFrame {
             }
         });
         jPanel19.add(btnTambahKeranjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 610, -1, 50));
+
+        jPanel10.setBackground(new java.awt.Color(0, 0, 51));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel6.setText("LAPORAN");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addContainerGap(874, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addContainerGap())
+        );
+
+        jPanel19.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,73 +136,10 @@ public class LaporanView extends javax.swing.JInternalFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSimpanTransaksi;
-    private javax.swing.JButton btnSimpanTransaksi1;
-    private javax.swing.JButton btnSimpanTransaksi2;
-    private javax.swing.JButton btnSimpanTransaksi3;
-    private javax.swing.JButton btnSimpanTransaksi4;
-    private javax.swing.JButton btnSimpanTransaksi5;
-    private javax.swing.JButton btnSimpanTransaksi6;
-    private javax.swing.JButton btnSimpanTransaksi7;
-    private javax.swing.JButton btnSimpanTransaksi8;
     private javax.swing.JButton btnTambahKeranjang;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTable tblBarangMasuk;
-    private javax.swing.JTable tblBarangMasuk1;
-    private javax.swing.JTable tblBarangMasuk2;
-    private javax.swing.JTable tblBarangMasuk3;
-    private javax.swing.JTable tblBarangMasuk4;
-    private javax.swing.JTable tblBarangMasuk5;
-    private javax.swing.JTable tblBarangMasuk6;
-    private javax.swing.JTable tblBarangMasuk7;
-    private javax.swing.JTable tblBarangMasuk8;
-    private javax.swing.JTextField txtTanggalMasuk;
-    private javax.swing.JTextField txtTanggalMasuk1;
-    private javax.swing.JTextField txtTanggalMasuk2;
-    private javax.swing.JTextField txtTanggalMasuk3;
-    private javax.swing.JTextField txtTanggalMasuk4;
-    private javax.swing.JTextField txtTanggalMasuk5;
-    private javax.swing.JTextField txtTanggalMasuk6;
-    private javax.swing.JTextField txtTanggalMasuk7;
-    private javax.swing.JTextField txtTanggalMasuk8;
     // End of variables declaration//GEN-END:variables
 }
