@@ -1,0 +1,28 @@
+DATA KONTRIBUSI KELOMPOK
+TUGAS BESAR - INVENTORY SYSTEM (SISTEM MANAJEMEN GUDANG)
+================================================================================
+
+Berikut adalah rincian pembagian tugas dan kontribusi dari masing-masing anggota kelompok dalam pengembangan aplikasi Inventory System:
+
+1. I Gusti Rajendra Raffernavaro || 10125199
+   - Mengembangkan Modul Master Data: Kategori (View, Controller, DAO, Model).
+   - Mengembangkan Modul Master Data: Barang (View, Controller, DAO, Model).
+   - Mengatur relasi logika antara Kategori dan Barang di database.
+
+2. Faisal Maulud Fazry || 10125212
+   - Mengembangkan Modul Master Data: Supplier (View, Controller, DAO, Model).
+   - Mengembangkan Modul Master Data: Pelanggan (View, Controller, DAO, Model).
+   - Mengelola fungsionalitas pendataan mitra logistik (masuk dan keluar).
+
+3. Muhammad Revansyah Firzatulloh || 10125205
+   - Mengembangkan Modul Transaksi: Barang Masuk (View, Controller, DAO, Model).
+   - Mengembangkan Modul Riwayat Transaksi (View, Controller, DAO, Model).
+   - Membuat fungsionalitas penambahan stok otomatis saat transaksi masuk dan pencatatan buku log.
+
+4. Indra Hardika Pratama || 10125202
+   - Mengembangkan Modul Transaksi: Barang Keluar (View, Controller, DAO, Model).
+   - Mengembangkan Modul Laporan / Report menggunakan integrasi JasperReports.
+   - Membuat validasi ketersediaan stok, pengurangan stok otomatis, serta export PDF dinamis.
+
+================================================================================
+Semua anggota telah berkontribusi secara penuh dalam perancangan antarmuka (View), pembuatan logika bisnis (Controller), dan eksekusi kueri ke database (DAO).
