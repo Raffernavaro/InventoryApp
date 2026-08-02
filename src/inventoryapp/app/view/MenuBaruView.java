@@ -34,6 +34,13 @@ public class MenuBaruView extends javax.swing.JFrame {
         inventoryapp.app.helper.HoverButtonEffect.apply(jButton6, normal, hover);
         inventoryapp.app.helper.HoverButtonEffect.apply(jButton7, normal, hover);
         inventoryapp.app.helper.HoverButtonEffect.apply(jButtonRiwayat, normal, hover);
+        
+        javax.swing.JLabel imgWelcome = new javax.swing.JLabel();
+        javax.swing.ImageIcon icon = new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/app/image/FRIV.png"));
+        imgWelcome.setIcon(icon);
+        imgWelcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgWelcome.setBounds(0, 0, jDesktopPane1.getWidth(), jDesktopPane1.getHeight());
+        jDesktopPane1.add(imgWelcome);
     }
 
     /**
