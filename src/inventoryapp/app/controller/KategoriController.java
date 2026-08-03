@@ -41,12 +41,10 @@ public class KategoriController {
         view.getBtnHapus().addActionListener(e -> hapus());
         view.getBtnRefresh().addActionListener(e -> resetForm());
 
-        // Event klik item di tabel
         view.getTblKategori().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 int row = view.getTblKategori().getSelectedRow();
-                // Konversi row index jika menggunakan TableRowSorter (Penting saat tabel difilter)
                 if (row != -1) {
                     int modelRow = view.getTblKategori().convertRowIndexToModel(row);
                     view.getTxtIdKategori().setText(TableHelper.getModel(view.getTblKategori()).getValueAt(modelRow, 0).toString());
@@ -56,7 +54,6 @@ public class KategoriController {
             }
         });
 
-        // Event pencarian
         view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
             public void keyReleased(java.awt.event.KeyEvent e) {
@@ -105,7 +102,6 @@ public class KategoriController {
         String nama = view.getTxtNamaKategori().getText().trim();
         String noRakStr = view.getTxtNoRak().getText().trim();
 
-        // Cek apakah input masih berupa placeholder bawaan helper
         if (nama.isEmpty() || noRakStr.isEmpty() || nama.equals("Nama Kategori") || noRakStr.equals("No.Rak")) {
             JOptionPane.showMessageDialog(view, "Data tidak boleh kosong!");
             return;
@@ -168,7 +164,6 @@ public class KategoriController {
     }
 
     private void resetForm() {
-        // Mengembalikan placeholder seperti saat form pertama kali dibuka
         TextFieldHelper.setPlaceholder(view.getTxtIdKategori(), "ID Kategori (OTOMATIS)");
         TextFieldHelper.setReadOnly(view.getTxtIdKategori());
         TextFieldHelper.setPlaceholder(view.getTxtNamaKategori(), "Nama Kategori");

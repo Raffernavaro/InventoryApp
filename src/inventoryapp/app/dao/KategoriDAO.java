@@ -23,7 +23,6 @@ public class KategoriDAO {
         String sql = "SELECT * FROM tmkategori";
         List<Kategori> daftarKategori = new ArrayList<>();
 
-        // Try-with-resources otomatis menutup PreparedStatement dan ResultSet
         try (PreparedStatement stmt = this.conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 

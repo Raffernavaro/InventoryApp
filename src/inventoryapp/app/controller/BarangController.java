@@ -20,9 +20,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import javax.swing.RowFilter;
 
-/**
- * Controller untuk menangani logika CRUD Master Data Barang.
- */
 public class BarangController {
 
     private final BarangView view;
@@ -47,7 +44,6 @@ public class BarangController {
         view.getBtnHapus().addActionListener(e -> hapus());
         view.getBtnRefresh().addActionListener(e -> resetForm());
 
-        // Event klik tabel untuk memilih data
         view.getTblBarang().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -79,7 +75,6 @@ public class BarangController {
             }
         });
 
-        // Event pencarian
         view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
             public void keyReleased(java.awt.event.KeyEvent e) {

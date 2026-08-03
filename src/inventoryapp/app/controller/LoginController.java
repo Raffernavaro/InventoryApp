@@ -41,19 +41,15 @@ public class LoginController {
             return;
         }
 
-        // Cek ke database via PegawaiDAO
         Pegawai pegawai = dao.login(username, password);
 
         if (pegawai != null) {
-            // 1. Simpan sesi login
             UserSession.setSession(pegawai);
 
             JOptionPane.showMessageDialog(view, "Selamat datang, " + pegawai.getNama() + "!");
 
-            // 2. Tutup LoginView
             view.dispose();
 
-            // 3. Buka MenuView beserta MenuController-nya
             MenuBaruView menuView = new MenuBaruView();
             menuView.setLocationRelativeTo(null);
             menuView.setVisible(true);

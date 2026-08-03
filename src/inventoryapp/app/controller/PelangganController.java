@@ -17,9 +17,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import javax.swing.RowFilter;
 
-/**
- * Controller untuk menangani logika CRUD Master Data Pelanggan.
- */
+
 public class PelangganController {
 
     private final PelangganView view;
@@ -61,7 +59,6 @@ public class PelangganController {
             }
         });
 
-        // Event pencarian
         view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
             public void keyReleased(java.awt.event.KeyEvent e) {
@@ -105,7 +102,6 @@ public class PelangganController {
         String alamat = view.getTxtAlamat().getText().trim();
         String noTelp = view.getTxtNoTelp().getText().trim();
 
-        // Validasi input kosong / placeholder
         if (kode.isEmpty() || "Kode Pelanggan".equalsIgnoreCase(kode) ||
             nama.isEmpty() || "Nama Pelanggan".equalsIgnoreCase(nama) ||
             alamat.isEmpty() || "Alamat".equalsIgnoreCase(alamat) ||

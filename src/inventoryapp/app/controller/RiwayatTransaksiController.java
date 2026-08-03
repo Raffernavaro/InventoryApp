@@ -33,7 +33,6 @@ public class RiwayatTransaksiController {
     }
     
     private void initController() {
-        // Event pencarian (Search)
         view.getTxtCari().addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -45,7 +44,6 @@ public class RiwayatTransaksiController {
             }
         });
 
-        // Event combo box kategori (Filter by Jenis Transaksi)
         view.getCmbKategori().addActionListener(e -> {
             String selected = view.getCmbKategori().getSelectedItem().toString();
             if (selected.equals("Jenis Transaksi")) {
@@ -59,7 +57,6 @@ public class RiwayatTransaksiController {
             }
         });
 
-        // Load data saat controller pertama kali dibuat
         loadData();
     }
     
@@ -68,7 +65,6 @@ public class RiwayatTransaksiController {
         TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
         view.getTblBarang().setRowSorter(tr);
 
-        // Memfilter data sesuai keyword secara case-insensitive
         tr.setRowFilter(RowFilter.regexFilter("(?i)" + keyword));
     }
     

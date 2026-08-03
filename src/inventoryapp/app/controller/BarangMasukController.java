@@ -25,9 +25,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import javax.swing.RowFilter;
 
-/**
- * Controller untuk mengelola Transaksi Barang Masuk.
- */
+
 public class BarangMasukController {
 
     private final BarangMasukView view;
@@ -116,7 +114,6 @@ public class BarangMasukController {
         Barang b = listBarang.get(selectedBarangIndex - 1);
         DefaultTableModel model = TableHelper.getModel(view.getTblBarangMasuk());
 
-        // Cek jika barang sudah ada di keranjang/tabel
         boolean found = false;
         for (int i = 0; i < model.getRowCount(); i++) {
             int existingId = Integer.parseInt(model.getValueAt(i, 0).toString());

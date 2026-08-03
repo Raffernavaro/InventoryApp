@@ -17,9 +17,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import javax.swing.RowFilter;
 
-/**
- * Controller untuk menangani logika CRUD Master Data Supplier.
- */
+
 public class SupplierController {
 
     private final SupplierView view;
@@ -40,7 +38,6 @@ public class SupplierController {
         view.getBtnHapus().addActionListener(e -> hapus());
         view.getBtnRefresh().addActionListener(e -> resetForm());
 
-        // Event klik pada tabel untuk memilih data
         view.getTblSupplier().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -61,7 +58,6 @@ public class SupplierController {
             }
         });
 
-        // Event pencarian
         view.getTxtCari().addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
             public void keyReleased(java.awt.event.KeyEvent e) {
@@ -105,7 +101,6 @@ public class SupplierController {
         String alamat = view.getTxtAlamat().getText().trim();
         String noTelp = view.getTxtNoTelp().getText().trim();
 
-        // Validasi input kosong / placeholder
         if (kode.isEmpty() || "Kode Supplier".equalsIgnoreCase(kode) ||
             nama.isEmpty() || "Nama Supplier".equalsIgnoreCase(nama) ||
             alamat.isEmpty() || "Alamat".equalsIgnoreCase(alamat) ||

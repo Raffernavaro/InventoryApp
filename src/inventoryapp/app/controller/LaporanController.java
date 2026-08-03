@@ -32,9 +32,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
 
-/**
- * Controller untuk menangani ekspor laporan menggunakan Jasper API dengan Progress Bar dialog.
- */
+
 public class LaporanController {
 
     private final LaporanView view;
@@ -102,7 +100,6 @@ public class LaporanController {
         final String reportFileName = reportFileNameTemp;
         final String defaultPdfName = defaultPdfNameTemp;
 
-        // JFileChooser for PDF save location
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Simpan Export PDF Laporan");
         fileChooser.setSelectedFile(new File(defaultPdfName));
@@ -110,7 +107,7 @@ public class LaporanController {
 
         int userSelection = fileChooser.showSaveDialog(view);
         if (userSelection != JFileChooser.APPROVE_OPTION) {
-            return; // User cancelled file chooser
+            return;
         }
 
         File fileToSave = fileChooser.getSelectedFile();

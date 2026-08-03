@@ -25,9 +25,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import javax.swing.RowFilter;
 
-/**
- * Controller untuk mengelola Transaksi Barang Keluar.
- */
+
 public class BarangKeluarController {
 
     private final BarangKeluarView view;
@@ -116,7 +114,6 @@ public class BarangKeluarController {
         Barang b = listBarang.get(selectedBarangIndex - 1);
         DefaultTableModel model = TableHelper.getModel(view.getTblBarangKeluar());
 
-        // Hitung total jumlah barang ini di keranjang saat ini
         int currentJumlahInCart = 0;
         int existingRowIndex = -1;
         for (int i = 0; i < model.getRowCount(); i++) {
@@ -139,7 +136,6 @@ public class BarangKeluarController {
             TableHelper.addRow(view.getTblBarangKeluar(), b.getId(), b.getNama(), jumlah);
         }
 
-        // Reset input barang
         view.getjComboBox1().setSelectedIndex(0);
         view.getTxtJumlahBarangKeluar().setText("");
         TextFieldHelper.setPlaceholder(view.getTxtJumlahBarangKeluar(), "Jumlah Barang Keluar");
