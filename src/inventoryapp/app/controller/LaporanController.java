@@ -41,6 +41,7 @@ public class LaporanController {
 
     public LaporanController(LaporanView view) {
         this.view = view;
+        view.getBtnExport().addActionListener(e-> exportPdf());
     }
 
     private JDialog createLoadingDialog(String title, String message) {

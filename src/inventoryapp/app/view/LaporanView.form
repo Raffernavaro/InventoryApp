@@ -50,7 +50,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="377" max="-2" attributes="0"/>
-                  <Component id="btnTambahKeranjang" pref="0" max="32767" attributes="0"/>
+                  <Component id="btnExport" pref="0" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="424" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -62,7 +62,7 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="jComboBox1" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
-                  <Component id="btnTambahKeranjang" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btnExport" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace pref="276" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -110,7 +110,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="btnTambahKeranjang">
+        <Component class="javax.swing.JButton" name="btnExport">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -127,7 +127,7 @@
             <Property name="text" type="java.lang.String" value="  Export PDF"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTambahKeranjangActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExportActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="jComboBox1">
@@ -139,8 +139,11 @@
               <Color blue="99" green="99" red="99" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="1">
+              <StringArray count="4">
                 <StringItem index="0" value="Pilih Laporan"/>
+                <StringItem index="1" value="Laporan Persediaan Stok"/>
+                <StringItem index="2" value="Laporan Barang Masuk"/>
+                <StringItem index="3" value="Laporan Barang Keluar"/>
               </StringArray>
             </Property>
           </Properties>

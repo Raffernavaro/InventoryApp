@@ -41,7 +41,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        btnTambahKeranjang = new javax.swing.JButton();
+        btnExport = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -71,20 +71,20 @@ public class LaporanView extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        btnTambahKeranjang.setBackground(new java.awt.Color(255, 0, 0));
-        btnTambahKeranjang.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnTambahKeranjang.setForeground(new java.awt.Color(240, 240, 240));
-        btnTambahKeranjang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/app/image/icons8_file_26px.png"))); // NOI18N
-        btnTambahKeranjang.setText("  Export PDF");
-        btnTambahKeranjang.addActionListener(new java.awt.event.ActionListener() {
+        btnExport.setBackground(new java.awt.Color(255, 0, 0));
+        btnExport.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnExport.setForeground(new java.awt.Color(240, 240, 240));
+        btnExport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventoryapp/app/image/icons8_file_26px.png"))); // NOI18N
+        btnExport.setText("  Export PDF");
+        btnExport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTambahKeranjangActionPerformed(evt);
+                btnExportActionPerformed(evt);
             }
         });
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Laporan" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Laporan", "Laporan Persediaan Stok", "Laporan Barang Masuk", "Laporan Barang Keluar" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -102,7 +102,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
                 .addGap(110, 110, 110))
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(377, 377, 377)
-                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(btnExport, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addGap(424, 424, 424))
         );
         jPanel9Layout.setVerticalGroup(
@@ -112,7 +112,7 @@ public class LaporanView extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(269, 269, 269)
-                .addComponent(btnTambahKeranjang, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnExport, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(276, Short.MAX_VALUE))
         );
 
@@ -130,9 +130,9 @@ public class LaporanView extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnTambahKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahKeranjangActionPerformed
+    private void btnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnTambahKeranjangActionPerformed
+    }//GEN-LAST:event_btnExportActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
@@ -142,12 +142,12 @@ public class LaporanView extends javax.swing.JInternalFrame {
         return jComboBox1;
     }
 
-    public javax.swing.JButton getBtnTambahKeranjang() {
-        return btnTambahKeranjang;
+    public javax.swing.JButton getBtnExport() {
+        return btnExport;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnTambahKeranjang;
+    private javax.swing.JButton btnExport;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel10;
